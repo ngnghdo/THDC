@@ -287,7 +287,7 @@ const Q = [
 {b:2, t:"mcq", lv:1, q:"Các thao tác xử lý máy tính gồm: (1)Nhận lệnh; (2)Nhận dữ liệu nếu cần; (3)Giải mã lệnh; (4)Thực hiện lệnh. Trình tự thực hiện hợp lý là? (Đề 2)", o:["1,3,2,4","4,2,1,3","3,2,4,1","1,2,3,4"]},
 
 // Đề 2 Q18
-{b:2, t:"mcq", lv:1, q:"Thành phần nào trong CPU đảm nhận việc thực hiện các phép xử lý dữ liệu?", o:["ALU","CU","Thanh ghi","BUS bên trong"]},
+{b:2, t:"mcq", lv:1, q:"Thành phần nào trong CPU đảm nhận việc thực hiện các phép xử lý dữ liệu?", o:["ALU","CU","RAM","ROM"]},
 
 // Đề 2 Q20
 {b:2, t:"mcq", lv:1, q:"Chức năng chính của RAM? (Đề 2)", o:["Lưu trữ dữ liệu và chương trình đang thực hiện","Lưu trữ chương trình dùng để khởi động máy tính","Lưu trữ dữ liệu lâu dài","Tất cả các đáp án trên"]},
@@ -307,7 +307,7 @@ const Q = [
 
 {b:2, t:"mcq", lv:1, q:"RAM là bộ nhớ có đặc điểm gì?", o:["Dữ liệu bị mất khi tắt nguồn (volatile)","Dữ liệu không bị mất khi tắt nguồn","Chỉ cho phép đọc, không cho ghi","Tốc độ truy xuất chậm hơn ổ cứng"]},
 
-{b:2, t:"mcq", lv:1, q:"Bus trong máy tính có chức năng gì?", o:["Truyền tín hiệu giữa các thành phần trong máy tính","Xử lý dữ liệu","Lưu trữ chương trình","Điều khiển thiết bị ngoại vi"]},
+{b:2, t:"mcq", lv:1, q:"Bus trong máy tính có chức năng gì?", o:["Truyền tín hiệu giữa các thành phần trong máy tính","Thực hiện các phép toán số học và logic trên dữ liệu","Lưu trữ tạm thời các lệnh đang được CPU xử lý","Quản lý việc phân phối tài nguyên cho các tiến trình"]},
 
 // ============================================================
 // CHAPTER 3: Internet và An toàn thông tin (networks, TCP/IP, protocols, security)
@@ -340,10 +340,10 @@ const Q = [
 {b:3, t:"mcq", lv:1, q:"Trong các loại mạng sau đây mạng nào có kích thước nhỏ nhất?", o:["LAN","MAN","GAN","WAN"]},
 
 // Phần I.3 Q9
-{b:3, t:"mcq", lv:1, q:"Trang web nào cho phép tạo một địa chỉ email miễn phí?", o:["Đáp án www.gmail.com và www.yahoo.com.vn","www.gmail.com","www.yahoo.com.vn","www.facebook.com"]},
+{b:3, t:"mcq", lv:1, q:"Trang web nào cho phép tạo một địa chỉ email miễn phí?", o:["Đáp án www.gmail.com và www.yahoo.com.vn","Đáp án www.gmail.com và tinhoc@soict.hut","Đáp án www.yahoo.com.vn và tinhoc@soict","Đáp án www.facebook.com và ftp://hut.edu"]},
 
 // Phần I.3 Q10
-{b:3, t:"mcq", lv:1, q:"Đâu là địa chỉ email hợp lệ?", o:["tinhoc@soict.hut.edu.vn","gmail.com","yahoo.com.vn","www.gmail.com"]},
+{b:3, t:"mcq", lv:1, q:"Đâu là địa chỉ email hợp lệ?", o:["tinhoc@soict.hut.edu.vn","http://soict.hut.edu.vn","ftp://mail.yahoo.com.vn","www.gmail.com/inbox.vn"]},
 
 // Đề 2 Q4
 {b:3, t:"mcq", lv:1, q:"Trong các loại mạng sau đây mạng nào có kích thước nhỏ nhất? (Đề 2)", o:["LAN","WAN","MAN","GAN"]},
@@ -352,7 +352,7 @@ const Q = [
 {b:3, t:"mcq", lv:1, q:"Trong các mạng sau đây, mạng nào là mạng cục bộ? (Đề 1)", o:["LAN","GAN","WAN","Internet"]},
 
 // Đề 3 Q2 (Windows file name characters)
-{b:3, t:"mcq", lv:1, q:"Các kí tự nào sau đây không được dùng để đặt tên tệp, thư mục trong hệ điều hành Windows?", o:["/, \\, <, >, :, |","@, 1, %","~, @, #, $","@, 1"]},
+{b:3, t:"mcq", lv:1, q:"Các kí tự nào sau đây không được dùng để đặt tên tệp, thư mục trong hệ điều hành Windows?", o:["/, \\, <, >, :, |","@, !, %, ^, &, ~","~, @, #, $, +, =","@, !, ^, &, ~, +"]},
 
 // Đề 2 Q29
 {b:3, t:"mcq", lv:2, q:"Khi đưa hệ thống vào vận hành trong thực tế, chiến lược nào có độ rủi ro thấp nhất?", o:["Song song","Thay thế","Thí điểm","Giai đoạn"]},
@@ -361,13 +361,13 @@ const Q = [
 {b:3, t:"mcq", lv:1, q:"Phát biểu nào dưới đây về Cơ sở dữ liệu là đúng?", o:["Là tập hợp các dữ liệu có liên quan tới nhau được lưu giữ trên máy tính để phục vụ cho việc sử dụng, quản lý dữ liệu","Cơ sở dữ liệu là tài nguyên phục vụ cho một người duy nhất","Là các thành phần cơ bản trong dữ liệu","Các dữ liệu được mã hóa dưới một dạng cấu trúc nào đó thay vì dưới dạng nhị phân"]},
 
 // Đề 1 Q5
-{b:3, t:"mcq", lv:1, q:"Trong các tên dưới đây, đâu là tên của một hệ điều hành?", o:["UNIX","Microsoft Office","WORD","Windows Explorer"]},
+{b:3, t:"mcq", lv:1, q:"Trong các tên dưới đây, đâu là tên của một hệ điều hành?", o:["UNIX","Excel","WORD","Paint"]},
 
 // --- Supplementary questions ---
 
 {b:3, t:"mcq", lv:1, q:"TCP/IP là viết tắt của cụm từ nào?", o:["Transmission Control Protocol / Internet Protocol","Transfer Control Protocol / Internet Protocol","Transmission Control Program / Internet Protocol","Transfer Communication Protocol / Internet Protocol"]},
 
-{b:3, t:"mcq", lv:1, q:"HTTP là giao thức dùng để làm gì?", o:["Truyền tải siêu văn bản (web)","Truyền file","Gửi email","Quản lý mạng"]},
+{b:3, t:"mcq", lv:1, q:"HTTP là giao thức dùng để làm gì?", o:["Truyền tải siêu văn bản (web)","Truyền tải tệp tin (file)","Gửi thư điện tử (email)","Phân giải tên miền (DNS)"]},
 
 {b:3, t:"mcq", lv:1, q:"Firewall (tường lửa) có chức năng chính là gì?", o:["Kiểm soát và lọc lưu lượng mạng vào/ra","Tăng tốc độ kết nối mạng","Lưu trữ dữ liệu trên mạng","Mã hóa dữ liệu"]},
 
@@ -383,25 +383,25 @@ const Q = [
 
 {b:4, t:"mcq", lv:1, q:"IoT là viết tắt của cụm từ nào?", o:["Internet of Things","Information of Technology","Internet of Technology","Integration of Things"]},
 
-{b:4, t:"mcq", lv:1, q:"Big Data đề cập đến điều gì?", o:["Tập dữ liệu rất lớn, phức tạp mà các công cụ truyền thống không xử lý được","Cơ sở dữ liệu quan hệ lớn","Dữ liệu lưu trên nhiều ổ cứng","Dữ liệu chỉ ở dạng văn bản"]},
+{b:4, t:"mcq", lv:1, q:"Big Data đề cập đến điều gì?", o:["Tập dữ liệu rất lớn, phức tạp mà các công cụ truyền thống không xử lý được","Tập dữ liệu được tổ chức trong hệ quản trị cơ sở dữ liệu quan hệ chuẩn","Tập dữ liệu được phân tán và lưu trữ trên nhiều máy chủ đám mây","Tập dữ liệu chỉ bao gồm văn bản và được mã hóa theo chuẩn Unicode"]},
 
-{b:4, t:"mcq", lv:1, q:"Blockchain là công nghệ gì?", o:["Sổ cái phân tán, không thể thay đổi (distributed ledger)","Hệ quản trị cơ sở dữ liệu","Giao thức mạng mới","Phần mềm chống virus"]},
+{b:4, t:"mcq", lv:1, q:"Blockchain là công nghệ gì?", o:["Sổ cái phân tán, không thể thay đổi (distributed ledger)","Hệ quản trị cơ sở dữ liệu tập trung (centralized DBMS)","Giao thức truyền dữ liệu mã hóa (encrypted protocol)","Phần mềm quản lý tài nguyên hệ thống (system manager)"]},
 
-{b:4, t:"mcq", lv:1, q:"GPU được sử dụng phổ biến trong lĩnh vực nào ngoài đồ họa?", o:["Huấn luyện mô hình AI / Machine Learning","Quản lý cơ sở dữ liệu","Xử lý văn bản","Bảo mật mạng"]},
+{b:4, t:"mcq", lv:1, q:"GPU được sử dụng phổ biến trong lĩnh vực nào ngoài đồ họa?", o:["Một nhánh của AI cho phép máy tính học từ dữ liệu mà không cần lập trình tường minh","Một ứng dụng phần mềm chuyên dùng để dạy người học viết mã nguồn","Một dạng robot tự hành có khả năng nhận diện và di chuyển thông minh","Một phiên bản hệ điều hành tích hợp trí tuệ nhân tạo vào nhân hệ"]},
 
-{b:4, t:"mcq", lv:1, q:"NPU (Neural Processing Unit) được thiết kế chuyên dụng cho tác vụ nào?", o:["Xử lý các phép tính mạng neuron / AI","Xử lý đồ họa 3D","Quản lý bộ nhớ","Truyền dữ liệu mạng"]},
+{b:4, t:"mcq", lv:1, q:"NPU (Neural Processing Unit) được thiết kế chuyên dụng cho tác vụ nào?", o:["Xử lý các phép tính mạng neuron / AI","Xử lý và dựng hình đồ họa 3D nhanh","Quản lý phân vùng bộ nhớ hệ thống","Truyền và định tuyến dữ liệu mạng"]},
 
-{b:4, t:"mcq", lv:1, q:"Cloud Computing (Điện toán đám mây) cho phép người dùng làm gì?", o:["Sử dụng tài nguyên máy tính qua Internet mà không cần sở hữu hạ tầng","Tăng tốc CPU cục bộ","Chỉ lưu trữ dữ liệu offline","Tạo mạng LAN ảo"]},
+{b:4, t:"mcq", lv:1, q:"Cloud Computing (Điện toán đám mây) cho phép người dùng làm gì?", o:["Sử dụng tài nguyên máy tính qua Internet mà không cần sở hữu hạ tầng","Tăng hiệu suất xử lý của CPU bằng cách ép xung tần số cao hơn","Lưu trữ toàn bộ dữ liệu trên ổ cứng cục bộ không cần mạng","Tạo và quản lý mạng nội bộ ảo giữa các máy tính gần nhau"]},
 
 {b:4, t:"mcq", lv:2, q:"Đặc điểm nào KHÔNG thuộc 5V của Big Data?", o:["Validation (Xác nhận)","Volume (Khối lượng)","Velocity (Tốc độ)","Variety (Đa dạng)"]},
 
-{b:4, t:"mcq", lv:1, q:"Machine Learning (Học máy) là gì?", o:["Một nhánh của AI cho phép máy tính học từ dữ liệu mà không cần lập trình tường minh","Phần mềm dạy lập trình","Robot có khả năng di chuyển","Hệ điều hành thông minh"]},
+{b:4, t:"mcq", lv:1, q:"Machine Learning (Học máy) là gì?", o:["Một nhánh của AI cho phép máy tính học từ dữ liệu mà không cần lập trình tường minh","Một ứng dụng phần mềm chuyên dùng để dạy người học viết mã nguồn","Một dạng robot tự hành có khả năng nhận diện và di chuyển thông minh","Một phiên bản hệ điều hành tích hợp trí tuệ nhân tạo vào nhân hệ"]},
 
 {b:4, t:"mcq", lv:2, q:"Smart City (Thành phố thông minh) ứng dụng chủ yếu công nghệ nào?", o:["IoT kết hợp Big Data và AI","Chỉ dùng mạng LAN","Chỉ dùng Blockchain","Chỉ dùng Cloud Computing"]},
 
 {b:4, t:"mcq", lv:1, q:"Công nghệ nào sau đây được ứng dụng nhiều trong tiền mã hóa (cryptocurrency)?", o:["Blockchain","Cloud Computing","IoT","Big Data"]},
 
-{b:4, t:"mcq", lv:2, q:"Deep Learning (Học sâu) khác với Machine Learning truyền thống ở điểm nào?", o:["Sử dụng mạng neuron nhân tạo nhiều lớp (deep neural networks)","Không cần dữ liệu huấn luyện","Chỉ hoạt động trên CPU","Chỉ dùng cho xử lý văn bản"]},
+{b:4, t:"mcq", lv:2, q:"Deep Learning (Học sâu) khác với Machine Learning truyền thống ở điểm nào?", o:["Sử dụng mạng neuron nhân tạo nhiều lớp (deep neural networks)","Không cần bất kỳ dữ liệu huấn luyện nào để hoạt động","Chỉ chạy được trên bộ xử lý trung tâm CPU thông thường","Chỉ áp dụng cho các bài toán xử lý và phân tích văn bản"]},
 
 // ============================================================
 // CHAPTER 5: Thuật toán (6 steps, algorithm properties, flowcharts, recursion)
@@ -419,7 +419,7 @@ const Q = [
 {b:5, t:"mcq", lv:1, q:"Phương pháp liệt kê tất cả các khả năng của lời giải, tiến hành thử để tìm ra lời giải đúng là phương pháp nào dưới đây?", o:["Phương pháp vét cạn","Phương pháp chia","Phương pháp thử","Phương pháp lặp"]},
 
 // Phần II Q4
-{b:5, t:"mcq", lv:2, q:"Cho biết giá trị của MAX khi kết thúc đoạn mã giả:\nA ← 3, B ← 1, C ← 5, MAX ← A\nif (MAX < B) then MAX ← B end if\nif (MAX < C) then MAX ← C end if", o:["5","1","3","Tất cả các ý trên đều sai"]},
+{b:5, t:"mcq", lv:2, q:"Cho biết giá trị của MAX khi kết thúc đoạn mã giả:\nA ← 3, B ← 1, C ← 5, MAX ← A\nif (MAX < B) then MAX ← B end if\nif (MAX < C) then MAX ← C end if", o:["5","1","3","6"]},
 
 // Phần II Q5
 {b:5, t:"mcq", lv:3, q:"Hàm T(n) được định nghĩa đệ quy như sau:\nT(0)=1; T(1)=1\nT(n)= 2T(n-1) + 3T(n-2) với n≥2\nHãy cho biết giá trị hàm T(4)?", o:["41","7","20","45"]},
@@ -519,7 +519,7 @@ const Q = [
 // --- Source questions (from quiz file) ---
 
 // Phần III.1 Q2
-{b:7, t:"mcq", lv:2, q:"Trong ngôn ngữ C, cho biết kết quả sau khi tính toán biểu thức: 1.5*(11/3)", o:["4.5","5.5","5.4999","Không thu được gì"]},
+{b:7, t:"mcq", lv:2, q:"Trong ngôn ngữ C, cho biết kết quả sau khi tính toán biểu thức: 1.5*(11/3)", o:["4.5","5.5","4.0","5.0"]},
 
 // Phần III.1 Q7
 {b:7, t:"mcq", lv:2, q:"Giá trị của b sau khi thực hiện đoạn mã sau?\nint a=-1, b=1;\nb+=a?2:1;", o:["3","2","4","1"]},
@@ -528,7 +528,7 @@ const Q = [
 {b:7, t:"mcq", lv:3, q:"Sau khi thực hiện các câu lệnh sau một cách tuần tự:\nint a=5, c=2;\nfloat b=11;\nint d=3;\nd = (int)b/c%5;\nGiá trị của biến d sẽ bằng?", o:["0","3","5","1"]},
 
 // Phần III.1 Q10
-{b:7, t:"mcq", lv:3, q:"Cho biết giá trị của f=((a=b)||(b>4)) với khai báo sau:\nunsigned int a=7, b=2, c=5, d=6;", o:["1","0","Biểu thức sai","Không trả về kết quả"]},
+{b:7, t:"mcq", lv:3, q:"Cho biết giá trị của f=((a=b)||(b>4)) với khai báo sau:\nunsigned int a=7, b=2, c=5, d=6;", o:["1","0","7","-1"]},
 
 // Đề 1 Q13
 {b:7, t:"mcq", lv:1, q:"Lựa chọn nào dưới đây chỉ ra thứ tự tăng của miền giá trị các kiểu dữ liệu?", o:["int, long, float, double","int, float, double, long","int, float, long, double","int, long, double, float"]},
@@ -546,7 +546,7 @@ const Q = [
 {b:7, t:"mcq", lv:2, q:"Cho một đoạn chương trình viết bằng ngôn ngữ lập trình C như sau:\nconst int i=0;\nprintf(\"%d\\n\",i++);\nHãy chỉ ra lỗi của đoạn chương trình trên (nếu có)?", o:["Toán tử ++ áp dụng lên một hằng số","Khai báo i sai cú pháp","Toán tử ++ thiếu một toán hạng","Đoạn chương trình trên không có lỗi cú pháp"]},
 
 // Đề 1 Q22
-{b:7, t:"mcq", lv:3, q:"Kết quả của biểu thức sau là?\n2+3*5 - 9 && 1+2-5%3 || 10<=2*6", o:["1","0","Chương trình báo lỗi","-1"]},
+{b:7, t:"mcq", lv:3, q:"Kết quả của biểu thức sau là?\n2+3*5 - 9 && 1+2-5%3 || 10<=2*6", o:["1","0","8","-1"]},
 
 // Đề 3 Q31
 {b:7, t:"mcq", lv:3, q:"Cho biết giá trị các biến a,b,c sau khi thực hiện đoạn chương trình sau:\nint a,b,c;\na=25/3;\nb=++a + 6;\nc =(b>15)?(b+7):(a*a);", o:["9, 15, 81","8, 15, 81","8, 15, 22","9, 15, 64"]},
@@ -599,15 +599,15 @@ const Q = [
 
 // --- Supplementary questions ---
 
-{b:8, t:"mcq", lv:1, q:"Trong C, ký tự định dạng %f dùng để in kiểu dữ liệu nào?", o:["float / double","int","char","string"]},
+{b:8, t:"mcq", lv:1, q:"Trong C, ký tự định dạng %f dùng để in kiểu dữ liệu nào?", o:["float / double","int / long","char / bool","short / byte"]},
 
-{b:8, t:"mcq", lv:1, q:"Trong C, ký tự định dạng %s dùng để in kiểu dữ liệu nào?", o:["Xâu ký tự (string)","Số nguyên","Số thực","Ký tự đơn"]},
+{b:8, t:"mcq", lv:1, q:"Trong C, ký tự định dạng %s dùng để in kiểu dữ liệu nào?", o:["Xâu ký tự (string)","Số nguyên (integer)","Số thực (float)","Ký tự đơn (char)"]},
 
 {b:8, t:"mcq", lv:1, q:"Trong C, để đọc một số nguyên từ bàn phím, ta dùng lệnh nào?", o:["scanf(\"%d\", &n);","printf(\"%d\", n);","gets(n);","scanf(\"%d\", n);"]},
 
 {b:8, t:"mcq", lv:2, q:"Ký tự đặc biệt '\\n' trong printf có tác dụng gì?", o:["Xuống dòng mới","In dấu gạch chéo","In ký tự n","Kết thúc chương trình"]},
 
-{b:8, t:"mcq", lv:2, q:"Ký tự định dạng %lld dùng để in kiểu dữ liệu nào?", o:["long long","long","int","double"]},
+{b:8, t:"mcq", lv:2, q:"Ký tự định dạng %lld dùng để in kiểu dữ liệu nào?", o:["long long","long int","unsigned","short int"]},
 
 {b:8, t:"mcq", lv:1, q:"Trong C, hàm scanf() cần dùng toán tử nào trước tên biến (trừ mảng/xâu)?", o:["& (địa chỉ)","* (con trỏ)","# (tiền xử lý)","$ (ký hiệu)"]},
 
@@ -618,7 +618,7 @@ const Q = [
 // --- Source questions (from quiz file) ---
 
 // Đề 3 Q9
-{b:9, t:"mcq", lv:3, q:"Trong ngôn ngữ lập trình C, cho biết kết quả hiển thị trên màn hình sau khi đoạn chương trình sau được thực hiện?\nint i=0;\nwhile(i<10) {\n  if(i%2==0) continue;\n  printf(\"%d \",i);\n  i++;\n}", o:["Vòng lặp vô hạn, không có kết quả nào được hiển thị","0 2 4 6 8","0 2 4 6 8 10","1 3 5 7 9"]},
+{b:9, t:"mcq", lv:3, q:"Trong ngôn ngữ lập trình C, cho biết kết quả hiển thị trên màn hình sau khi đoạn chương trình sau được thực hiện?\nint i=0;\nwhile(i<10) {\n  if(i%2==0) continue;\n  printf(\"%d \",i);\n  i++;\n}", o:["Vòng lặp vô hạn, không có kết quả nào được hiển thị","Chương trình in ra các số chẵn từ 0 đến 8 trên màn hình","Chương trình in ra tất cả số chẵn từ 0 đến 10 trên màn hình","Chương trình in ra các số lẻ từ 1 đến 9 theo thứ tự tăng dần"]},
 
 // Đề 3 Q10
 {b:9, t:"mcq", lv:2, q:"Cho biết kết quả hiển thị trên màn hình?\nint n = 0;\ndo {\n  n +=3; printf(\"%d \",n);\n  if(n>10) break;\n}while(n%3 == 0);", o:["3 6 9 12","0 3 6 9","0 3 6 9 12","vòng lặp vô hạn"]},
@@ -633,7 +633,7 @@ const Q = [
 {b:9, t:"mcq", lv:2, q:"Hãy chọn biểu thức thích hợp tại vị trí X để chương trình ngôn ngữ C sẽ đọc đến khi biến n được nhập thỏa mãn lớn hơn 0 và nhỏ hơn bằng 100.\nint n;\ndo{\n  printf(\"Moi nhap: \"); scanf(\"%d\",&n);\n} while(X);", o:["(n<=0) || (n>100)","(n>100)&&(n<0)","(n>=100)&&(n<=0)","(0<n) || (n<100)"]},
 
 // Đề 3 Q14
-{b:9, t:"mcq", lv:3, q:"Cho một đoạn chương trình viết bằng ngôn ngữ lập trình C như sau:\nint a=5;\nswitch(a){\n  case 1: printf(\"First\");\n  case 2: printf(\"Second\");\n  case 3+2: printf(\"Third\");\n  case 5: printf(\"Final\");break;\n}\nhãy cho biết kết quả của đoạn chương trình trên?", o:["Chương trình báo lỗi cú pháp.","ThirdFinal","Third","FirstSecondThirdFinal"]},
+{b:9, t:"mcq", lv:3, q:"Cho một đoạn chương trình viết bằng ngôn ngữ lập trình C như sau:\nint a=5;\nswitch(a){\n  case 1: printf(\"First\");\n  case 2: printf(\"Second\");\n  case 3+2: printf(\"Third\");\n  case 5: printf(\"Final\");break;\n}\nhãy cho biết kết quả của đoạn chương trình trên?", o:["Chương trình báo lỗi cú pháp.","Chương trình in ra ThirdFinal","Chương trình chỉ in ra Third","Chương trình in FirstSecond."]},
 
 // Đề 2 Q6
 {b:9, t:"mcq", lv:2, q:"Cho đoạn chương trình C sau:\nint i = 0;\ndo{\n  if ( !(i%2) ) printf( \"%3d\", i );\n  i++;\n}\nwhile (i<10);\nChương trình sẽ in ra:", o:["0 2 4 6 8","0 2 4","1 3 5 7 9","2 3 4 5 6 7 8 9"]},
@@ -648,7 +648,7 @@ const Q = [
 {b:9, t:"mcq", lv:2, q:"Cho biết giá trị của A và B sau đoạn chương trình sau:\nint A = 10, B = 17;\nif (A < B){\n  A = B;\n  B = A;\n}", o:["A = 17 và B = 17","A = 10 và B = 17","A = 17 và B = 10","A = 10 và B = 10"]},
 
 // Phần III.2 Q1
-{b:9, t:"mcq", lv:3, q:"Đoạn chương trình sau sẽ in những gì ra màn hình?\nint i=0; char c='c';\nfor(i=0;i<6;i=i+2){\n  c=c+i;\n  printf(\"%d \",c);\n}", o:["Tất cả các phương án trên đều sai.","c e i","c e i o","e i o"]},
+{b:9, t:"mcq", lv:3, q:"Đoạn chương trình sau sẽ in những gì ra màn hình?\nint i=0; char c='c';\nfor(i=0;i<6;i=i+2){\n  c=c+i;\n  printf(\"%d \",c);\n}", o:["Tất cả các phương án trên đều sai.","Chương trình in ra các ký tự c e i","Chương trình in ra ký tự c e i o","Chương trình chỉ in ra ba ký tự e i o"]},
 
 // Phần III.2 Q2
 {b:9, t:"mcq", lv:2, q:"Trong ngôn ngữ lập trình C, khi đoạn chương trình sau được thực hiện, biến A có giá trị bao nhiêu?\nint i, A=0;\nfor (i=1; i<100; i+=13) {\n  A = A + 100;\n  break;\n}", o:["100","0","760","10000"]},
@@ -657,16 +657,16 @@ const Q = [
 {b:9, t:"mcq", lv:2, q:"Viết chương trình yêu cầu người dùng nhập vào một số n (0≤n≤100). Nếu người dùng nhập sai thì yêu cầu nhập lại. Cần điền đáp án nào vào dấu (...) để chương trình thực hiện như yêu cầu?\nint n;\ndo{ scanf(\"%d\",&n); } while(...);", o:["while (n<0||n>100)","if((n>0)&&(n<100))","while((n>0)&&(n<100))","if (n<0||n>100)"]},
 
 // Phần III.2 Q4
-{b:9, t:"mcq", lv:2, q:"Hãy cho biết đoạn chương trình sau kết quả in ra màn hình như thế nào?\nint a=1, n=0;\nwhile (n<10) {\n  a++;\n}\nprintf(\"a=%d\",a);", o:["Chương trình bị lặp vô hạn","a=1","a=a","a=10"]},
+{b:9, t:"mcq", lv:2, q:"Hãy cho biết đoạn chương trình sau kết quả in ra màn hình như thế nào?\nint a=1, n=0;\nwhile (n<10) {\n  a++;\n}\nprintf(\"a=%d\",a);", o:["Chương trình bị lặp vô hạn","Chương trình in ra a=1","Chương trình in ra a=a","Chương trình in a=10"]},
 
 // Phần III.2 Q5
 {b:9, t:"mcq", lv:2, q:"Trong ngôn ngữ lập trình C, cho biết kết quả hiển thị trên màn hình sau khi đoạn chương trình sau được thực hiện?\nint i=0;\nwhile (i<10) {\n  i=i+2;\n  printf(\"%d \",i);\n}", o:["2 4 6 8 10","2 4 6 8","0 2 4 6 8","0 2 4 6 8 10"]},
 
 // Phần III.2 Q9
-{b:9, t:"mcq", lv:2, q:"Trong ngôn ngữ lập trình C, khi đoạn chương trình sau được thực hiện, biến A có giá trị bao nhiêu?\nint i, A=0;\nfor (i=1; i<100; i+=13) {\n  continue;\n  A = A + 1;\n}", o:["0","10","76","Chương trình lỗi không chạy được."]},
+{b:9, t:"mcq", lv:2, q:"Trong ngôn ngữ lập trình C, khi đoạn chương trình sau được thực hiện, biến A có giá trị bao nhiêu?\nint i, A=0;\nfor (i=1; i<100; i+=13) {\n  continue;\n  A = A + 1;\n}", o:["0","10","76","8"]},
 
 // Phần III.2 Q10
-{b:9, t:"mcq", lv:3, q:"Trong ngôn ngữ lập trình C, kết quả của đoạn chương trình sau là gì?\nint i=1, A=0;\nfor (; ; i+=13) {\n  if(i>0) break;\n  A = A + 1;\n  else continue;\n}\nprintf(\"%d\",A);", o:["Chương trình lỗi không chạy được","0","Chương trình lặp vô hạn","13"]},
+{b:9, t:"mcq", lv:3, q:"Trong ngôn ngữ lập trình C, kết quả của đoạn chương trình sau là gì?\nint i=1, A=0;\nfor (; ; i+=13) {\n  if(i>0) break;\n  A = A + 1;\n  else continue;\n}\nprintf(\"%d\",A);", o:["Chương trình lỗi không chạy được","Chương trình in ra kết quả là 0","Chương trình bị lặp mãi vô hạn","Chương trình in ra kết quả 13"]},
 
 // Đề 2 Q33 (THDC print)
 {b:9, t:"mcq", lv:2, q:"Trong ngôn ngữ lập trình C, khi đoạn chương trình được thực hiện thì xâu \"THDC\" được in ra mấy lần?\nint i;\nfor(i=0;i<=10;i++){\n  if(i<=5){\n    printf(\"THDC\");\n    continue; }\n  else\n    break;\n  printf(\"THDC\"); }", o:["6 lần","11 lần","0 lần","12 lần"]},
@@ -701,7 +701,7 @@ const Q = [
 
 {b:9, t:"mcq", lv:1, q:"Trong C, lệnh break trong vòng lặp có tác dụng gì?", o:["Thoát khỏi vòng lặp ngay lập tức","Bỏ qua lần lặp hiện tại","Kết thúc chương trình","Quay lại đầu vòng lặp"]},
 
-{b:9, t:"mcq", lv:1, q:"Trong C, lệnh continue trong vòng lặp có tác dụng gì?", o:["Bỏ qua phần còn lại của lần lặp hiện tại và chuyển sang lần lặp tiếp theo","Thoát khỏi vòng lặp","Kết thúc chương trình","Lặp lại vòng lặp từ đầu"]},
+{b:9, t:"mcq", lv:1, q:"Trong C, lệnh continue trong vòng lặp có tác dụng gì?", o:["Bỏ qua phần còn lại của lần lặp hiện tại và chuyển sang lần lặp tiếp theo","Thoát hoàn toàn khỏi vòng lặp và tiếp tục thực hiện lệnh phía sau","Kết thúc toàn bộ chương trình đang chạy và giải phóng bộ nhớ dùng","Quay lại thực hiện vòng lặp lại từ đầu kể cả biểu thức khởi tạo"]},
 
 {b:9, t:"mcq", lv:1, q:"Vòng lặp do...while khác vòng lặp while ở điểm nào?", o:["Thân vòng lặp được thực hiện ít nhất 1 lần","Thân vòng lặp có thể không được thực hiện lần nào","Không có sự khác biệt","Vòng lặp do...while không kiểm tra điều kiện"]},
 
@@ -733,7 +733,7 @@ const Q = [
 {b:10, t:"mcq", lv:3, q:"Cho đoạn chương trình sau:\nint i, S=0, a[10] = {1,5,6,12,3,9,5,1,4,7};\nfor(i=0;i<10;i++){\n  if(a[i]%4) S+=i;\n}\nKết quả của S là?", o:["34","37","33","45"]},
 
 // Đề 3 Q18
-{b:10, t:"mcq", lv:1, q:"Giả sử a, b là hai biến mảng kiểu int có cùng số lượng phần tử. Để gán các giá trị của mảng b vào mảng a, cách nào sau đây là đúng?", o:["Dùng cấu trúc lặp để gán từng phần tử của b cho a","Dùng lệnh gán a=b;","Dùng lệnh gán *a=*b;","Cả 3 đáp án đều đúng"]},
+{b:10, t:"mcq", lv:1, q:"Giả sử a, b là hai biến mảng kiểu int có cùng số lượng phần tử. Để gán các giá trị của mảng b vào mảng a, cách nào sau đây là đúng?", o:["Dùng cấu trúc lặp để gán từng phần tử của b cho a","Dùng trực tiếp lệnh gán mảng a=b trong chương trình","Dùng trực tiếp lệnh gán con trỏ *a=*b để sao chép","Cả ba đáp án nêu trên đều có thể thực hiện được"]},
 
 // Đề 3 Q29
 {b:10, t:"mcq", lv:3, q:"Cho biết kết quả in ra S của đoạn sau?\nint i, S = 0;\nint A[3][4] = { {3, 6, 9}, {1, 2}, {1}};\nfor( i = 0; i <3; i++) S+=A[i][i];", o:["5","6","7","28"]},
@@ -751,7 +751,7 @@ const Q = [
 {b:10, t:"mcq", lv:3, q:"Kết quả được in ra sau khi thực hiện đoạn chương trình sau bao nhiêu?\nint i, n = 0;\nint A[] = {6, 25, 18, 9, 20, 24, 15, 10};\nfor( i = 0; i < n; i++)\n  if(A[i] % 2 ==1){\n    A[n] = A[i];\n    n++;\n  }\nfor(i = 0; i < n; i++)\n  printf(\"%2d\",A[i]);", o:["Không in ra gì","6 25 18 9 20 24 15 10","25 9 15","6 18 20 24 10"]},
 
 // Đề 1 Q27
-{b:10, t:"mcq", lv:2, q:"px là con trỏ tới x, py là con trỏ tới y. Câu lệnh nào trong các câu lệnh sau tương ứng với y=3*x+z;", o:["Cả đáp án *py=3*x+z (1) và *py=3*(*px)+z (2)","*py=3*x+z (1)","*py=3*(*px)+z (2)","py=3*x+z (3)"]},
+{b:10, t:"mcq", lv:2, q:"px là con trỏ tới x, py là con trỏ tới y. Câu lệnh nào trong các câu lệnh sau tương ứng với y=3*x+z;", o:["Cả đáp án *py=3*x+z (1) và *py=3*(*px)+z (2)","Cả đáp án *py=3*x+z (1) và py=3*(*px)+z (3)","Cả đáp án *py=3*(*px)+z (2) và py=3*x+z (3)","Chỉ có đáp án py=3*x+z (3) là đúng duy nhất"]},
 
 // Đề 1 Q29
 {b:10, t:"mcq", lv:3, q:"Cho biết giá trị của x sau khi thực hiện đoạn mã nguồn sau?\nchar s[]=\"Ho tro hoc tap Bach Khoa\";\nfor (char*p=s;*p;++p){\n  if(*p==' '){*p=0;break;}\n}\nint x=strlen(s)+sizeof(s);", o:["27","26","28","29"]},
@@ -764,7 +764,7 @@ const Q = [
 
 // --- Supplementary questions ---
 
-{b:10, t:"mcq", lv:1, q:"Trong C, chỉ số phần tử đầu tiên của mảng là bao nhiêu?", o:["0","1","-1","Tùy thuộc vào khai báo"]},
+{b:10, t:"mcq", lv:1, q:"Trong C, chỉ số phần tử đầu tiên của mảng là bao nhiêu?", o:["0","1","-1","2"]},
 
 {b:10, t:"mcq", lv:1, q:"Hàm strlen(s) trong C trả về giá trị gì?", o:["Số ký tự trong xâu s (không tính '\\0')","Kích thước bộ nhớ được cấp phát cho s","Số ký tự trong xâu s (tính cả '\\0')","Vị trí ký tự cuối cùng"]},
 
@@ -797,15 +797,15 @@ const Q = [
 
 {b:11, t:"mcq", lv:2, q:"Cho khai báo:\nstruct SinhVien {\n  char ten[30];\n  int tuoi;\n  float diem;\n};\nBiến sv kiểu SinhVien. Cách truy cập trường 'tuoi' nào đúng?", o:["sv.tuoi","sv->tuoi","sv[tuoi]","sv:tuoi"]},
 
-{b:11, t:"mcq", lv:2, q:"Cho khai báo:\ntypedef struct { int x; int y; } Diem;\nDiem d1 = {3, 7};\nDiem *p = &d1;\nGiá trị của p->y là bao nhiêu?", o:["7","3","0","Lỗi biên dịch"]},
+{b:11, t:"mcq", lv:2, q:"Cho khai báo:\ntypedef struct { int x; int y; } Diem;\nDiem d1 = {3, 7};\nDiem *p = &d1;\nGiá trị của p->y là bao nhiêu?", o:["7","3","0","10"]},
 
 {b:11, t:"mcq", lv:2, q:"Khi khai báo mảng struct, ví dụ:\nstruct SV sv[50];\nPhần tử thứ 3 (chỉ số 2) được truy cập bằng cách nào?", o:["sv[2]","sv[3]","sv(2)","sv{2}"]},
 
-{b:11, t:"mcq", lv:1, q:"Trong C, struct có thể chứa những thành phần nào?", o:["Các biến thuộc nhiều kiểu dữ liệu khác nhau","Chỉ các biến cùng một kiểu dữ liệu","Chỉ các hàm","Chỉ các con trỏ"]},
+{b:11, t:"mcq", lv:1, q:"Trong C, struct có thể chứa những thành phần nào?", o:["Các biến thuộc nhiều kiểu dữ liệu khác nhau","Chỉ các biến thuộc cùng một kiểu dữ liệu","Chỉ các hàm xử lý dữ liệu bên trong","Chỉ các biến con trỏ trỏ đến kiểu cơ bản"]},
 
 {b:11, t:"mcq", lv:2, q:"Kích thước (sizeof) của một struct trong C phụ thuộc vào điều gì?", o:["Tổng kích thước các trường và có thể bị ảnh hưởng bởi padding","Chỉ phụ thuộc vào trường lớn nhất","Luôn bằng tổng kích thước các trường","Phụ thuộc vào số lượng trường"]},
 
-{b:11, t:"mcq", lv:3, q:"Cho khai báo:\nstruct Node {\n  int data;\n  struct Node *next;\n};\nĐây là cấu trúc gì?", o:["Cấu trúc tự trỏ (self-referential structure)","Cấu trúc lồng nhau","Cấu trúc đệ quy vô hạn","Khai báo sai cú pháp"]},
+{b:11, t:"mcq", lv:3, q:"Cho khai báo:\nstruct Node {\n  int data;\n  struct Node *next;\n};\nĐây là cấu trúc gì?", o:["Cấu trúc tự trỏ (self-referential structure)","Cấu trúc lồng nhau (nested structure definition)","Cấu trúc đệ quy (infinite recursive structure)","Khai báo sai cú pháp (invalid syntax error)"]},
 
 // ============================================================
 // CHAPTER 12: Hàm (functions, scope, pass by value/address, recursion in C)
@@ -820,7 +820,7 @@ const Q = [
 {b:12, t:"mcq", lv:3, q:"Cho hàm func() định nghĩa như sau:\nint func(int a,int b){\n  if(a==b) return a;\n  else if(a<b) return func(a,b-a);\n  else return func(a-b,b);\n}\nHãy cho biết kết quả trả về khi thực hiện lời gọi hàm func(29,100):", o:["1","13","42","71"]},
 
 // Đề 3 Q27
-{b:12, t:"mcq", lv:2, q:"Kết quả của đoạn chương trình sau là gì?\nint a=123, b;\ndo{\n  b= a % 10;\n  printf(\"%d\", b);\n  a=a/10;\n}while(a != 0);", o:["321","123","Lỗi chương trình","123123"]},
+{b:12, t:"mcq", lv:2, q:"Kết quả của đoạn chương trình sau là gì?\nint a=123, b;\ndo{\n  b= a % 10;\n  printf(\"%d\", b);\n  a=a/10;\n}while(a != 0);", o:["321","123","132","312"]},
 
 // Đề 3 Q32
 {b:12, t:"mcq", lv:2, q:"Đoạn mã sau cài đặt hàm kiểm tra số nguyên dương n (n>2) có là số nguyên tố. Nếu k=0 thì n không là số nguyên tố và ngược lại. Điền biểu thức A, B còn thiếu:\nint SONGUYENTO (int n){\n  int i, k = 1;\n  for(i=2; A; i++) if(B) k= 0;\n  return k;\n}", o:["i<n và n%i==0","i<=n và n%i==0","i<n và n%i=0","i*i<n và n/i==0"]},
@@ -871,7 +871,7 @@ const Q = [
 
 {b:13, t:"mcq", lv:1, q:"Chế độ mở tệp \"r\" trong fopen() có nghĩa là gì?", o:["Mở tệp để đọc (read)","Mở tệp để ghi (write)","Mở tệp để ghi thêm (append)","Mở tệp để đọc và ghi"]},
 
-{b:13, t:"mcq", lv:1, q:"Chế độ mở tệp \"w\" trong fopen() có nghĩa là gì?", o:["Mở tệp để ghi, nếu tệp đã tồn tại thì xóa nội dung cũ","Mở tệp để đọc","Mở tệp để ghi thêm vào cuối","Mở tệp ở chế độ nhị phân"]},
+{b:13, t:"mcq", lv:1, q:"Chế độ mở tệp \"w\" trong fopen() có nghĩa là gì?", o:["Mở tệp để ghi, nếu tệp đã tồn tại thì xóa nội dung cũ","Mở tệp chỉ để đọc dữ liệu từ đầu đến cuối tệp","Mở tệp để ghi thêm dữ liệu mới vào cuối nội dung","Mở tệp ở chế độ nhị phân để đọc từng byte dữ liệu"]},
 
 {b:13, t:"mcq", lv:1, q:"Chế độ mở tệp \"a\" trong fopen() có nghĩa là gì?", o:["Mở tệp để ghi thêm vào cuối (append)","Mở tệp để đọc","Mở tệp để ghi, xóa nội dung cũ","Mở tệp ở chế độ nhị phân"]},
 
@@ -881,9 +881,9 @@ const Q = [
 
 {b:13, t:"mcq", lv:2, q:"Hàm fscanf() khác scanf() ở điểm nào?", o:["fscanf() đọc dữ liệu từ tệp, scanf() đọc từ bàn phím","fscanf() ghi dữ liệu vào tệp, scanf() ghi ra màn hình","Không có sự khác biệt","fscanf() chỉ đọc xâu ký tự"]},
 
-{b:13, t:"mcq", lv:1, q:"Hằng số EOF trong C có ý nghĩa gì?", o:["Đánh dấu kết thúc tệp (End Of File)","Đánh dấu lỗi tệp","Đánh dấu đầu tệp","Đánh dấu dòng trống"]},
+{b:13, t:"mcq", lv:1, q:"Hằng số EOF trong C có ý nghĩa gì?", o:["Đánh dấu kết thúc tệp (End Of File)","Đánh dấu phát sinh lỗi (File Error)","Đánh dấu bắt đầu tệp (Begin Of File)","Đánh dấu dòng trống (Blank Empty Line)"]},
 
-{b:13, t:"mcq", lv:2, q:"Sự khác biệt chính giữa tệp văn bản (text file) và tệp nhị phân (binary file) là gì?", o:["Tệp văn bản lưu dữ liệu dưới dạng ký tự đọc được, tệp nhị phân lưu dưới dạng byte thô","Tệp văn bản nhỏ hơn tệp nhị phân","Tệp nhị phân chỉ lưu số","Không có sự khác biệt"]},
+{b:13, t:"mcq", lv:2, q:"Sự khác biệt chính giữa tệp văn bản (text file) và tệp nhị phân (binary file) là gì?", o:["Tệp văn bản lưu dữ liệu dưới dạng ký tự đọc được, tệp nhị phân lưu dưới dạng byte thô","Tệp văn bản luôn có kích thước nhỏ hơn tệp nhị phân khi lưu cùng nội dung","Tệp nhị phân chỉ có thể lưu trữ các giá trị số nguyên và số thực dấu phẩy","Không có sự khác biệt nào giữa tệp văn bản và tệp nhị phân trong thực tế"]},
 
 {b:13, t:"mcq", lv:2, q:"Để đọc một khối dữ liệu từ tệp nhị phân, ta dùng hàm nào?", o:["fread()","fscanf()","fgets()","getc()"]},
 
@@ -891,7 +891,7 @@ const Q = [
 
 {b:13, t:"mcq", lv:2, q:"Hàm fgets(str, n, fp) đọc tối đa bao nhiêu ký tự từ tệp?", o:["n-1 ký tự","n ký tự","n+1 ký tự","Đọc cho đến hết dòng, không giới hạn"]},
 
-{b:13, t:"mcq", lv:3, q:"Cho đoạn chương trình:\nFILE *f = fopen(\"data.txt\", \"w\");\nfprintf(f, \"%d %d\", 10, 20);\nfclose(f);\nf = fopen(\"data.txt\", \"r\");\nint a, b;\nfscanf(f, \"%d %d\", &a, &b);\nfclose(f);\nprintf(\"%d\", a+b);\nKết quả in ra là?", o:["30","10","20","Lỗi chương trình"]},
+{b:13, t:"mcq", lv:3, q:"Cho đoạn chương trình:\nFILE *f = fopen(\"data.txt\", \"w\");\nfprintf(f, \"%d %d\", 10, 20);\nfclose(f);\nf = fopen(\"data.txt\", \"r\");\nint a, b;\nfscanf(f, \"%d %d\", &a, &b);\nfclose(f);\nprintf(\"%d\", a+b);\nKết quả in ra là?", o:["30","10","20","50"]},
 
 // ============================================================
 // SUPPLEMENTARY: Code & Short Answer Questions (Ch.6-13)
