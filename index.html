@@ -932,7 +932,7 @@ var currentCh=0,filterType="all",filterWrong=false,filterUncertain=false,shuffle
 
 function loadState(){try{var s=localStorage.getItem(LS_KEY);if(s)return JSON.parse(s)}catch(e){}return{answers:{},uncertain:{},selected:{},code:{},shuffleSeed:0}}
 function saveState(){try{localStorage.setItem(LS_KEY,JSON.stringify(state))}catch(e){}}
-function seedHash(s){var h=0;for(var i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0}return h+shuffleSeed}
+function seedHash(s){var h=0;for(var i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0}return (h+shuffleSeed)|0}
 function shuffle(a,seed){a=a.slice();var s=Math.abs(seed);for(var i=a.length-1;i>0;i--){s=(s*1103515245+12345)&0x7fffffff;var j=s%(i+1);var t=a[i];a[i]=a[j];a[j]=t}return a}
 function qid(q,i){return"q"+q.b+"_"+q.t+"_"+i}
 var QI=Q.map(function(q,i){var r={};for(var k in q)r[k]=q[k];r._id=qid(q,i);r._idx=i;return r});
@@ -995,7 +995,7 @@ function answer(id,si,ok){state.selected[id]=si;state.answers[id]=ok?"correct":"
 function selfAssess(id,r){state.answers[id]=r;saveState();render()}
 function toggleMark(id){if(state.uncertain[id])delete state.uncertain[id];else state.uncertain[id]=true;saveState();renderFilters();var b=document.querySelector('#card_'+id+' .uncertain-btn');if(b)b.classList.toggle("marked")}
 function toggleHint(elId){var el=document.getElementById(elId);if(el)el.classList.toggle("visible")}
-function reshuffleABCD(){shuffleSeed=Date.now();state.shuffleSeed=shuffleSeed;saveState();render()}
+function reshuffleABCD(){shuffleSeed=(shuffleSeed+Math.floor(Math.random()*9000)+1000)|0;state.shuffleSeed=shuffleSeed;saveState();render()}
 var resetTap=0;document.getElementById("resetBtn").addEventListener("click",function(){var s=this;if(resetTap===0){s.textContent="Chắc chắn xóa? Nhấn lần nữa";s.classList.add("confirm");resetTap=1;setTimeout(function(){s.textContent="Xóa toàn bộ tiến trình";s.classList.remove("confirm");resetTap=0},3000)}else{state={answers:{},uncertain:{},selected:{},code:{},shuffleSeed:0};saveState();s.textContent="Đã xóa ✓";s.classList.remove("confirm");resetTap=0;shuffleSeed=0;setTimeout(function(){s.textContent="Xóa toàn bộ tiến trình";render()},1000)}});
 function render(){renderTabs();renderFilters();renderStats();renderCards()}
 render();
