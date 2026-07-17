@@ -64,7 +64,7 @@ header p{color:var(--muted);font-size:.85rem;margin-top:4px}
 .badge-mcq{background:var(--accent-light);color:var(--accent)}
 .badge-code{background:#fdf6e3;color:#b58900}
 .badge-short{background:#e8f5ee;color:#2d8a56}
-.card-level{font-size:.7rem;color:var(--muted)}
+.card-level{font-size:.7rem;color:var(--muted);margin-right:36px}
 .card-q{font-size:.95rem;margin-bottom:14px;white-space:pre-wrap}
 .card-q code{background:var(--code-bg);padding:1px 5px;border-radius:3px;font-family:'Consolas','Courier New',monospace;font-size:.88em}
 .options{display:flex;flex-direction:column;gap:6px}
@@ -592,7 +592,7 @@ function renderCards(){
  var bc,bt;
  if(q.t==="mcq"){bc="badge-mcq";bt="MCQ"}else if(q.t==="code"){bc="badge-code";bt="CODE"}else{bc="badge-short";bt="TỰ LUẬN"}
  html+='<div class="card" id="card_'+id+'">';
- html+='<button class="uncertain-btn'+(isU?' marked':'')+'" onclick="toggleMark(\''+id+'\')" title="Chưa chắc">?</button>';
+ html+='<button class="uncertain-btn'+(isU?' marked':'')+'" onclick="toggleMark(\''+id+'\')" title="Chưa chắc">&#9733;</button>';
  var qNum=(currentCh===0&&currentCat==="all")?q._idx+1:qi+1;html+='<div class="card-header"><span class="q-num">'+qNum+'</span><span class="card-badge '+bc+'">'+bt+'</span><span class="card-level">'+lv+' · '+(CH_NAMES[q.b]||('Ch.'+q.b))+(q.cat?' · '+q.cat:'')+'</span></div>';
  html+='<div class="card-q">'+formatQ(q.q)+'</div>';
  
