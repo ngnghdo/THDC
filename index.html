@@ -124,6 +124,7 @@ header p{color:var(--muted);font-size:.85rem;margin-top:4px}
 .skip-chk input{accent-color:var(--accent);cursor:pointer;width:14px;height:14px}
 .skip-chk.active{background:rgba(255,100,100,.1);border-color:#e05555;color:#e05555}
 .skip-count{font-size:.76rem;opacity:.7;margin-left:2px}
+.q-num{display:inline-block;font-size:.72rem;font-weight:700;color:var(--muted);background:var(--filter-bg);border:1px solid var(--card-border);border-radius:4px;padding:1px 6px;margin-right:6px;min-width:28px;text-align:center}
 </style>
 </head>
 <body>
@@ -585,14 +586,14 @@ function renderCards(){
  var qs=getFiltered();
  if(!qs.length){area.innerHTML='<p style="text-align:center;color:var(--muted);padding:40px">Không có câu hỏi nào.</p>';return}
  var html='';
- qs.forEach(function(q){
+ qs.forEach(function(q,qi){
  var id=q._id,answered=state.answers[id],isU=state.uncertain[id];
  var lv=["","M1","M2","M3"][q.lv];
  var bc,bt;
  if(q.t==="mcq"){bc="badge-mcq";bt="MCQ"}else if(q.t==="code"){bc="badge-code";bt="CODE"}else{bc="badge-short";bt="TỰ LUẬN"}
  html+='<div class="card" id="card_'+id+'">';
  html+='<button class="uncertain-btn'+(isU?' marked':'')+'" onclick="toggleMark(\''+id+'\')" title="Chưa chắc">?</button>';
- html+='<div class="card-header"><span class="card-badge '+bc+'">'+bt+'</span><span class="card-level">'+lv+' · '+(CH_NAMES[q.b]||('Ch.'+q.b))+(q.cat?' · '+q.cat:'')+'</span></div>';
+ var qNum=(currentCh===0&&currentCat==="all")?q._idx+1:qi+1;html+='<div class="card-header"><span class="q-num">'+qNum+'</span><span class="card-badge '+bc+'">'+bt+'</span><span class="card-level">'+lv+' · '+(CH_NAMES[q.b]||('Ch.'+q.b))+(q.cat?' · '+q.cat:'')+'</span></div>';
  html+='<div class="card-q">'+formatQ(q.q)+'</div>';
  
  if(q.t==="mcq"){
@@ -666,7 +667,7 @@ function renderFilters(){
  if(state.answers[q._id]==="wrong")wc++;
  if(state.uncertain[q._id])uc++;
  });
- bar.innerHTML='<button class="filter-btn'+(filterType==="all"?" active":"")+'" onclick="setFilter(\'all\')">Tất cả<span class="count">'+qs.length+'</span></button><button class="filter-btn'+(filterType==="mcq"?" active":"")+'" onclick="setFilter(\'mcq\')">MCQ<span class="count">'+mc+'</span></button><button class="filter-btn'+(filterType==="code"?" active":"")+'" onclick="setFilter(\'code\')">Code<span class="count">'+cc+'</span></button><button class="filter-btn'+(filterType==="short"?" active":"")+'" onclick="setFilter(\'short\')">Tự luận<span class="count">'+sc+'</span></button><button class="filter-btn'+(filterWrong?" active":"")+'" onclick="toggleWrong()">Sai<span class="count">'+wc+'</span></button><button class="filter-btn'+(filterUncertain?" active":"")+'" onclick="toggleUncertain()">Chưa chắc<span class="count">'+uc+'</span></button><button class="filter-btn" onclick="reshuffleABCD()" title="Xáo lại vị trí A/B/C/D">Trộn ABCD</button>';
+ bar.innerHTML='<button class="filter-btn'+(filterType==="all"?" active":"")+'" onclick="setFilter(\'all\')">Tất cả<span class="count">'+qs.length+'</span></button><button class="filter-btn'+(filterType==="mcq"?" active":"")+'" onclick="setFilter(\'mcq\')">MCQ<span class="count">'+mc+'</span></button><button class="filter-btn'+(filterType==="code"?" active":"")+'" onclick="setFilter(\'code\')">Code<span class="count">'+cc+'</span></button><button class="filter-btn'+(filterType==="short"?" active":"")+'" onclick="setFilter(\'short\')">Tự luận<span class="count">'+sc+'</span></button><button class="filter-btn'+(filterWrong?" active":"")+'" onclick="toggleWrong()">⚠ Câu sai<span class="count">'+wc+'</span></button><button class="filter-btn'+(filterUncertain?" active":"")+'" onclick="toggleUncertain()">Chưa chắc<span class="count">'+uc+'</span></button><button class="filter-btn" onclick="reshuffleABCD()" title="Xáo lại vị trí A/B/C/D">Trộn ABCD</button>';
 }
 
 function renderStats(){
