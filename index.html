@@ -523,7 +523,7 @@ var currentCh=0,currentCat="all",filterType="all",filterWrong=false,filterUncert
 function loadState(){try{var s=localStorage.getItem(LS_KEY);if(s)return JSON.parse(s)}catch(e){}return{answers:{},uncertain:{},selected:{},code:{},seen:{},shuffleSeed:0}}
 function saveState(){try{localStorage.setItem(LS_KEY,JSON.stringify(state))}catch(e){}}
 function seedHash(s){var h=0;for(var i=0;i<s.length;i++){h=((h<<5)-h)+s.charCodeAt(i);h|=0}return (h+shuffleSeed)|0}
-function shuffle(a,seed){a=a.slice();var s=Math.abs(seed);for(var i=a.length-1;i>0;i--){s=(s*1103515245 + 12345)&0x7fffffff;var j=s%(i+1);var t=a[i];a[i]=a[j];a[j]=t}return a}
+function shuffle(a,seed){a=a.slice();var s=seed|0;if(!s)s=1;for(var i=a.length-1;i>0;i--){s=s^(s<<13);s|=0;s=s^(s>>17);s=s^(s<<5);s|=0;var j=(s>>>0)%(i+1);var t=a[i];a[i]=a[j];a[j]=t}return a}
 function qid(q,i){return"q"+q.b+"_"+q.t+"_"+i}
 var QI=Q.map(function(q,i){var r={};for(var k in q)r[k]=q[k];r._id=qid(q,i);r._idx=i;return r});
 function escHtml(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
