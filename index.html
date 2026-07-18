@@ -698,12 +698,15 @@ function renderTabs(){
  var ad=0;QI.forEach(function(q){if(isDone(q))ad++});
  var ap=QI.length?Math.round(ad/QI.length*100):0;
  h+='<button class="tab'+(currentCh===0?' active':'')+'" onclick="setCh(0)">Tất cả<span class="mini-bar"><span class="mini-fill" style="width:'+ap+'%"></span></span></button>';
- for(var c=1;c<=13;c++){
+ var chOrder=[1,2,3,4,5,14,15,16,6,7,8,9,10,11,12,13];
+ chOrder.forEach(function(c){
  var cq=QI.filter(function(q){return q.b===c});
+ if(!cq.length)return;
  var d=cq.filter(function(q){return isDone(q)}).length;
  var p=cq.length?Math.round(d/cq.length*100):0;
- h+='<button class="tab'+(currentCh===c?' active':'')+'" onclick="setCh('+c+')">'+(CH_NAMES[c]||('Ch.'+c))+'<span class="mini-bar"><span class="mini-fill" style="width:'+p+'%"></span></span></button>';
- }
+ var tabIdx=chOrder.indexOf(c)+1;
+ h+='<button class="tab'+(currentCh===c?' active':'')+'" onclick="setCh('+c+')">'+tabIdx+'. '+(CH_NAMES[c]||('Ch.'+c))+'<span class="mini-bar"><span class="mini-fill" style="width:'+p+'%"></span></span></button>';
+ });
  }
  bar.innerHTML=h;
 }
